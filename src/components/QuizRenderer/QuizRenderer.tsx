@@ -7,7 +7,7 @@ import { QuizForm } from './QuizForm'
 import { QuizHeader } from './QuizHeader'
 import { MessageType, RenderMode } from './QuizRenderer.interface'
 
-interface Props {
+export interface QuizRendererProps {
     questions: Question[]
     mode?: RenderMode
     inSpanish?: boolean
@@ -16,7 +16,7 @@ interface Props {
 
 
 
-export const QuizRenderer = ({ questions, maxQuestions = 100, mode = 'test', inSpanish = false }: Props) => {
+export const QuizRenderer = ({ questions, maxQuestions = 100, mode = 'test', inSpanish = false }: QuizRendererProps) => {
 
     const history = useHistory()
 
