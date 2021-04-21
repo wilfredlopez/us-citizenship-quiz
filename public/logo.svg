@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" height="100%" width="100%" viewBox="0 0 300 300"><g id="svg-container" transform="matrix(4.21,0,0,4.21,134.97870012283326,43.09603046417236)"><g id="surrounding_shape" transform="matrix(1,0,0,1,-97.37180213928222,11.915413856506348)"><line x1="100" y1="0" x2="100" y2="25.087324659066883" stroke-width="1" stroke="#0e385d" data-shape-id="custom" surrounded-groups="symbols" fill-type="outline" id="surrounding_shape_0"></line></g><g id="headline" transform="matrix(1,0,0,1,10.034928512573241,0)"><text data-font-id="1265" font-family="tennessee_whiskey_base" id="headline_0" transform="matrix(1,0,0,1,0,23.89268978444236)" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="headline_0_word_0" fill="#0e385d" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}">US</tspan></text><text data-font-id="1265" font-family="tennessee_whiskey_base" id="headline_1" transform="matrix(1,0,0,1,0,37.033668132664)" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="headline_1_word_0" fill="#e51b23" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}">QUIZ</tspan></text></g><g id="symbols" transform="matrix(1.4285714735052886,0,0,1.4285714735052886,-27.492662481654932,11.91541507027366)"><svg enable-background="new 0 0 177.7 177.6" version="1.1" viewBox="0 0 177.7 177.6" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" data-external-asset-id="631242" width="17.57101467959666" height="17.561126657829867" id="symbols_0" fill="#e51b23">
+<style type="text/css">
+	.st0{opacity:0.2;}
+	.st1{opacity:0.3;}
+	.st2{opacity:0.4;}
+	.st3{opacity:0.6;}
+</style>
+	<circle class="st0" cx="88.9" cy="88.8" r="88.8"></circle>
+	<path class="st1" d="m88.8 177.6c49 0 88.8-39.7 88.8-88.8 0-22.6-8.5-43.2-22.4-58.9-2.2 0.6-4.5 1.3-6.7 2-48 15.5-51.4 9.7-70.3-3.8-14.2-10-33.5-7.3-52.2-2.1-16.1 16.1-26 38.3-26 62.8 0 49 39.7 88.8 88.8 88.8z"></path>
+	<path class="st2" d="m88.8 177.6c49 0 88.8-39.7 88.8-88.8 0-2.4-0.1-4.9-0.3-7.3-15.8 2.8-35.3-2.4-56.8-19.9-36.3-29.6-71-5.2-77.3 0-3.6 3-20.1 11.7-42.2 14.5-0.7 4.1-1 8.4-1 12.7 0 49 39.7 88.8 88.8 88.8z"></path>
+	<path class="st3" d="m88.8 177.6c49 0 88.8-39.7 88.8-88.8 0-4.5 0.4-2.9-0.3-7.3-8.4 5.5-28.8 15.8-42.6 22.4-36.6 17.7-50.5-7.7-75.3-16-18.2-6.1-36.3-3-59.2 7.1 3.2 46.1 41.6 82.6 88.6 82.6z"></path>
+	<path d="m88.8 177.6c34.6 0 64.6-19.8 79.2-48.7-33.2 5.8-27 8.5-50.2-2.2-45.3-21-56.4-5.4-98.3 17.7 16.3 20.2 41.3 33.2 69.3 33.2z"></path>
+</svg></g></g><defs><style>@font-face {font-family: tennessee_whiskey_base;src: url(https://pismo.tailorbrands.com/v2/px_fonts/tennessee_whiskey_base)}</style></defs></svg>

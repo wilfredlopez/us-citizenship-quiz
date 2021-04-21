@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 import flagBackground from '../assets/flag_background_1.png'
@@ -9,6 +10,9 @@ interface Props {
 }
 
 export const Home = (props: Props) => {
+    useEffect(() => {
+        document.title = 'Home | US Citizenship Quiz'
+    }, [])
     return (
         <>
             <div style={{
