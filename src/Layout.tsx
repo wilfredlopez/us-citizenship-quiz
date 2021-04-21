@@ -1,5 +1,6 @@
 import { PropsWithChildren } from 'react'
 import { Link } from 'react-router-dom'
+import { HomeIcon } from './components/HomeIcon'
 
 
 function Layout(props: PropsWithChildren<{}>) {
@@ -7,11 +8,18 @@ function Layout(props: PropsWithChildren<{}>) {
         <div >
             <header>
                 <div className="container">
-                    <h1>
-                        <Link to="/" className="unstyled-link">
-                            US Citizenship Quiz
+                    <div className="flex justify-between align-center">
+
+                        <h1>
+                            <Link to="/" className="unstyled-link">
+                                US Citizenship Quiz
+                            </Link>
+                        </h1>
+
+                        <Link to="/">
+                            <HomeIcon />
                         </Link>
-                    </h1>
+                    </div>
 
                 </div>
             </header>

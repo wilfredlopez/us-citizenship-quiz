@@ -11,11 +11,12 @@ interface Props {
     questions: Question[]
     mode?: RenderMode
     inSpanish?: boolean
+    maxQuestions?: number
 }
 
 
 
-export const QuizRenderer = ({ questions, mode = 'test', inSpanish = false }: Props) => {
+export const QuizRenderer = ({ questions, maxQuestions = 100, mode = 'test', inSpanish = false }: Props) => {
 
     const history = useHistory()
 
@@ -51,7 +52,7 @@ export const QuizRenderer = ({ questions, mode = 'test', inSpanish = false }: Pr
             console.warn(`[LAST_QUESTION]: Should navigate to results.`)
             history.push('/quiz/results', {
                 totalCorrect,
-                totalQuestions: 100
+                totalQuestions: maxQuestions
             })
             return
         }
@@ -105,7 +106,7 @@ export const QuizRenderer = ({ questions, mode = 'test', inSpanish = false }: Pr
     return (
         <div className="container">
             <div className="container-md">
-                <QuizHeader mode={mode} totalCorrect={totalCorrect} />
+                <QuizHeader maxQuestions={maxQuestions} mode={mode} totalCorrect={totalCorrect} />
                 <QuizForm
                     inSpanish={inSpanish}
                     currentQuestion={currentQuestion}

@@ -34,7 +34,7 @@ export const Home = (props: Props) => {
                         <h2 className="mt-1 mb-1 text-start">Available Quizes: </h2>
                         <div className="flex">
                             <Link to="/quiz/2020" className="unstyled-link">
-                                <button className="btn btn-gradient">
+                                <button className="btn text-normal btn-gradient">
                                     US Civics Quiz  2020
                                 </button>
                             </Link>
@@ -42,7 +42,7 @@ export const Home = (props: Props) => {
                         </div>
                         <div className="flex mt-1">
                             <Link to="/quiz/es/2020" className="unstyled-link">
-                                <button className="btn btn-gradient">
+                                <button className="btn text-normal btn-gradient">
                                     US Civics Quiz  2020 (Spanish)
                                 </button>
                             </Link>
@@ -50,20 +50,41 @@ export const Home = (props: Props) => {
                         </div>
                         <div className="flex mt-1">
                             <Link to="/quiz/practice/2020" className="unstyled-link">
-                                <button className="btn btn-gradient">
+                                <button className="btn text-normal btn-gradient">
                                     US Civics Quiz 2020 (Practice Mode)
                                 </button>
                             </Link>
                         </div>
                         <div className="flex mt-1">
                             <Link to="/quiz/es/practice/2020" className="unstyled-link">
-                                <button className="btn btn-gradient">
+                                <button className="btn text-normal btn-gradient">
                                     US Civics Quiz 2020 (Spanish Practice Mode)
                                 </button>
                             </Link>
                         </div>
 
                     </div>
+                    <div className="container-sm card mt-1">
+                        <h2 className="mt-1 mb-1 text-start">10 Random Questions: </h2>
+                        <div className="flex flex-center">
+                            <Link to="/random/2020" className="unstyled-link">
+                                <button className="btn text-normal btn-gradient">
+                                    2020 (EN)
+                                </button>
+                            </Link>
+
+                        </div>
+                        <div className="flex flex-center mt-1">
+                            <Link to="/random/es/2020" className="unstyled-link">
+                                <button className="btn text-normal btn-gradient">
+                                    2020 (ES)
+                                </button>
+                            </Link>
+
+                        </div>
+
+                    </div>
+
 
 
                     <div className="mt-3 mb-3 pb-3">

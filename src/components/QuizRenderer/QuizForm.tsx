@@ -1,5 +1,6 @@
 import React from 'react'
 import { Question } from '../../model/Question'
+import { ArrowForwardIcon } from '../ArrowForwardIcon'
 import { MessageType } from './QuizRenderer.interface'
 import { translateString } from './translateString'
 
@@ -41,7 +42,9 @@ export const QuizForm = ({ handleSubmit, inSpanish, currentQuestion, enableSubmi
                     <button
                         disabled={!enableSubmit}
                         type="submit"
-                        className="btn btn-submit">{translateString(inSpanish, 'submit')}</button>
+                        className="btn btn-submit">{translateString(inSpanish, 'submit')}
+                        <ArrowForwardIcon className="translate-x-1" />
+                    </button>
                 </div>
                 <div className="pt-1">
                     <p className={message === null ? "message" : message === 'Correct!' ? 'message success' : 'message danger'}>{message}</p>
