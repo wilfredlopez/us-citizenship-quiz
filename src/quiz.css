@@ -1,0 +1,66 @@
+.q-title {
+  font-size: 1.65rem;
+}
+
+.question-button {
+  background-color: #ffee77 !important;
+  color: black !important;
+  border-radius: 13px !important;
+  box-shadow: none !important;
+  text-transform: initial !important;
+}
+
+label {
+  margin-left: 0.2em;
+}
+
+.btn-submit {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  background: linear-gradient(45deg, #155792, #0e385d 35%, #0a253d);
+  color: white;
+}
+
+.btn-submit:disabled,
+.btn-submit:hover.btn-submit:disabled {
+  background: linear-gradient(45deg, #155792, #0e385d 35%, #0a253d);
+  color: white;
+  opacity: 0.5;
+}
+.submit-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.card-top {
+  position: absolute;
+  top: 0px;
+  transform: translate(-18px, -30px);
+  font-weight: bold;
+  background: linear-gradient(45deg, #f14f4f, #ff3131);
+  color: white;
+  padding: 3px 10px;
+  left: 0px;
+  border-radius: 4px 4px 4px 0px;
+}
+
+.card-top-right,
+.btn.card-top-right {
+  position: absolute;
+  top: 0px;
+  transform: translate(20px, -20px);
+  font-weight: bold;
+  font-size: 0.82rem;
+  color: white;
+  padding: 3px 10px !important;
+  right: 0px;
+  border-radius: 50% !important;
+  min-width: 30px;
+  background: linear-gradient(45deg, #154d7d, #19568c 35%, #0f385d) !important;
+}
+
+.highlight-q {
+  color: blue;
+}

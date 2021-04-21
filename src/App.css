@@ -1,38 +1,334 @@
-.App {
+:root {
+  --colorPrimary: #f14f4f;
+  --colorPrimaryLight: #ff8282;
+  --colorPrimaryDark: rgb(206, 66, 66);
+  --colorDark: #141414;
+  --colorLight: #fdfdfd;
+  --colorSecondary: #0e385d;
+  --colorSecondaryDark: #0d3355;
+  --colorSecondaryLight: #114470;
+  --colorInfo: #2d869c;
+  --colorInfoDark: #257083;
+  --colorInfoLight: #359bb4;
+}
+
+.text-start {
+  text-align: start;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+footer a,
+fotter a:visited,
+header a,
+header a:visited {
+  color: var(--colorLight);
+}
+
+.container {
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+}
+
+.container-sm {
+  max-width: 320px;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  border: 1px solid #cecece;
+  padding: 1rem;
+  box-shadow: 0px 2px 2px 0px rgb(0 0 0 / 20%);
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+header {
+  box-shadow: 0px 1px 3px 0px rgb(0 0 0 / 23%);
+}
+header,
+footer {
+  color: white;
+  padding: 1rem;
+  background-color: var(--colorSecondary);
+}
+
+main {
+  min-height: calc(100vh - 50vh);
+}
+
+.text-center {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.m-1 {
+  margin: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.m-2 {
+  margin: 2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.m-3 {
+  margin: 3rem;
+}
+
+.ml-1 {
+  margin-left: 1rem;
+}
+
+.ml-2 {
+  margin-left: 2rem;
+}
+.ml-3 {
+  margin-left: 3rem;
+}
+.mr-1 {
+  margin-right: 1rem;
+}
+.mr-2 {
+  margin-right: 2rem;
+}
+.mr-3 {
+  margin-right: 3rem;
+}
+.mt-1 {
+  margin-top: 1rem;
+}
+.mt-2 {
+  margin-top: 2rem;
+}
+.mt-3 {
+  margin-top: 3rem;
+}
+.mb-1 {
+  margin-bottom: 1rem;
+}
+.mb-2 {
+  margin-bottom: 2rem;
+}
+.mb-3 {
+  margin-bottom: 3rem;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.p-3 {
+  padding: 3rem;
+}
+
+.pl-1 {
+  padding-left: 1rem;
+}
+
+.pl-2 {
+  padding-left: 2rem;
+}
+.pl-3 {
+  padding-left: 3rem;
+}
+.pr-1 {
+  padding-right: 1rem;
+}
+.pr-2 {
+  padding-right: 2rem;
+}
+.pr-3 {
+  padding-right: 3rem;
+}
+.pt-1 {
+  padding-top: 1rem;
+}
+.pt-2 {
+  padding-top: 2rem;
+}
+.pt-3 {
+  padding-top: 3rem;
+}
+.pb-1 {
+  padding-bottom: 1rem;
+}
+.pb-2 {
+  padding-bottom: 2rem;
+}
+.pb-3 {
+  padding-bottom: 3rem;
+}
+
+#copyright-section {
+  text-align: center;
+  width: 100%;
+  background: black;
+  color: white;
+  padding: 1rem;
+}
+
+.btn {
+  padding: 8px 18px;
+  outline: 0;
+  border: 0;
+  opacity: 1;
+  font-size: 0.875rem;
   align-items: center;
+  text-transform: uppercase;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%),
+    0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+  cursor: pointer;
+  border-radius: 2px;
+  min-width: 64px;
+  font-weight: 500;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  display: inline-flex;
+  vertical-align: middle;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-decoration: none;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  background-color: #f7f8f8;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.btn-sm {
+  padding: 3px 11px;
+  min-width: 30px;
+}
+
+.btn:hover {
+  /* box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%),
+    0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 1px 0px rgb(0 0 0 / 12%); */
+  background-color: #f1f3f3;
+}
+
+.btn-primary {
+  background-color: var(--colorPrimary);
+  color: white;
+}
+.btn-primary:disabled,
+.btn-primary:disabled.btn-primary:hover {
+  background-color: var(--colorPrimaryLight);
+  color: white;
+  opacity: 0.6;
+}
+.btn-primary:hover {
+  background-color: var(--colorPrimaryDark);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-secondary {
+  background-color: var(--colorSecondary);
+  color: white;
+}
+.btn-secondary:disabled {
+  background-color: var(--colorSecondaryLight);
+  color: white;
+}
+.btn-secondary:hover {
+  background-color: var(--colorSecondaryDark);
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-info {
+  background-color: var(--colorInfo);
+  color: white;
+}
+.btn-info:hover {
+  background-color: var(--colorInfoDark);
+  color: white;
+}
+.btn-info:disabled,
+.btn-info:disabled.btn-info:hover {
+  background-color: var(--colorInfoLight);
+  color: white;
+}
+
+.btn-info-outline {
+  background-color: transparent;
+  border: 1px solid var(--colorInfo);
+  color: var(--colorInfo);
+}
+.btn-info-outline:hover {
+  background-color: transparent;
+  border: 1px solid var(--colorInfoDark);
+  color: var(--colorInfoDark);
+  opacity: 1;
+}
+.btn-info-outline:disabled,
+.btn-info-outline:disabled.btn-info-outline:hover {
+  border: 1px solid var(--colorInfoLight);
+  color: var(--colorInfoLight);
+  background-color: transparent;
+  opacity: 0.9;
+}
+
+.success {
+  color: green;
+}
+
+.message {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.unstyled-link {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.danger {
+  color: red;
+}
+
+/* <shape xmlns:android="http://schemas.android.com/apk/res/android">
+<gradient
+    android:angle="45"
+    android:centerX="35%"
+    android:centerColor="#0e385d"
+    android:startColor="#155792"
+    android:endColor="#0a253d"
+    android:type="linear" />
+</shape> */
+.gradient-blue-bg {
+  background: linear-gradient(45deg, #155792, #0e385d 35%, #0a253d);
+}
+
+.btn-gradient {
+  background: linear-gradient(45deg, #155792, #0e385d 35%, #0a253d);
+  color: white;
+}
+
+.card-circle {
+  border-radius: 40px;
+  padding: 0.5rem 1rem;
 }

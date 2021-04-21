@@ -1,0 +1,9 @@
+.image-full {
+  width: 100%;
+  object-fit: cover;
+  background-size: cover;
+}
+
+.max-width-sm {
+  max-width: 280px;
+}
