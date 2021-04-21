@@ -48,7 +48,11 @@ header a:visited {
   max-width: 320px;
   margin: auto;
 }
-
+.container-md {
+  width: 100%;
+  max-width: 590px;
+  margin: auto;
+}
 .card {
   background: white;
   border: 1px solid #cecece;

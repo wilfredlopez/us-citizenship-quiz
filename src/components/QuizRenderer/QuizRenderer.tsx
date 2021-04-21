@@ -104,25 +104,27 @@ export const QuizRenderer = ({ questions, mode = 'test', inSpanish = false }: Pr
 
     return (
         <div className="container">
-            <QuizHeader mode={mode} totalCorrect={totalCorrect} />
-            <QuizForm
-                inSpanish={inSpanish}
-                currentQuestion={currentQuestion}
-                handleAnswerClick={handleAnswerClick}
-                handleSubmit={handleSubmit}
-                message={message}
-                displayHighlight={displayHighlight}
-                enableSubmit={enableSubmit}
-            />
+            <div className="container-md">
+                <QuizHeader mode={mode} totalCorrect={totalCorrect} />
+                <QuizForm
+                    inSpanish={inSpanish}
+                    currentQuestion={currentQuestion}
+                    handleAnswerClick={handleAnswerClick}
+                    handleSubmit={handleSubmit}
+                    message={message}
+                    displayHighlight={displayHighlight}
+                    enableSubmit={enableSubmit}
+                />
 
-            <QuizFooter
-                inSpanish={inSpanish}
-                showFooter={mode === 'practice'}
-                revealAnswers={revealAnswers}
-                currentQuestion={currentQuestion}
-                enableNext={enableNext}
-                goToNext={goToNext}
-                setRevealAnswers={setRevealAnswers} />
+                <QuizFooter
+                    inSpanish={inSpanish}
+                    showFooter={mode === 'practice'}
+                    revealAnswers={revealAnswers}
+                    currentQuestion={currentQuestion}
+                    enableNext={enableNext}
+                    goToNext={goToNext}
+                    setRevealAnswers={setRevealAnswers} />
+            </div>
         </div>
     )
 }
