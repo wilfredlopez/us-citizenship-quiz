@@ -7,11 +7,12 @@ export const QuizWrapper = (props: PropsWithChildren<{}>) => {
         <div
             style={{
                 background: `url(${flagBackground})`,
-                backgroundSize: 'cover',
+                // backgroundSize: 'cover',
+                backgroundSize: 'contain',
                 width: "100vw",
                 maxWidth: '100%',
                 backgroundRepeat: "no-repeat",
-                overflow: 'hidden'
+                overflowY: 'hidden'
             }}
         >
             <br />

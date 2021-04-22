@@ -4,7 +4,7 @@ import { translateString } from './translateString'
 
 interface Props {
     enableNext: boolean
-    goToNext: () => void
+    goToNext: (totalCorrectAfter?: number) => void
     revealAnswers: boolean
     setRevealAnswers: (cb: ((current: boolean) => boolean) | boolean) => void
     currentQuestion: Question
@@ -26,8 +26,8 @@ export const QuizFooter = ({ enableNext, inSpanish, goToNext, revealAnswers, set
                 }}>
 
                     <button
-                        disabled={!enableNext}
-                        className="btn btn-primary" onClick={goToNext}>{translateString(inSpanish, 'next')}</button>
+                        // disabled={!enableNext}
+                        className="btn btn-primary" onClick={() => goToNext()}>{translateString(inSpanish, 'next')}</button>
                 </div>
             </div>
             <section className="p-1">

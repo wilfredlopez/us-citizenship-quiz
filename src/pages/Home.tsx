@@ -26,7 +26,7 @@ export const Home = (props: Props) => {
                 {/* <img src={flagBackground} alt="us flag" className="image-full" /> */}
                 <section className="container mb-1 text-center">
                     <div style={{
-                        marginTop: 170
+                        marginTop: 130
                     }} />
                     <img src={uscis} alt="U.S Citizenship and migration services" className="image-full max-width-sm" />
                     <div className="container-sm card mt-1">
@@ -98,7 +98,7 @@ export const Home = (props: Props) => {
                         <div className="mt-1 mb-1">
 
                             <p>
-                                Prepare you for the Civics test at
+                                Prepare for your the Civics test at
                                 <a href="https://www.uscis.gov/citizenship/find-study-materials-and-resources"> uscis.gov</a>
                             </p>
                         </div>

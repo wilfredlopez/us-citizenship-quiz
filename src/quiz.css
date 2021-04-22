@@ -64,3 +64,39 @@ label {
 .highlight-q {
   color: blue;
 }
+
+input[type='radio' i] {
+  cursor: pointer;
+  margin: 3px 3px 3px 3px;
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+  height: 20px;
+  width: 20px;
+  -webkit-appearance: none;
+  outline: none;
+}
+
+input[type='radio']:after {
+  --size: 15px;
+  background-color: #f6f6f6;
+  border-radius: 25px;
+  box-shadow: inset 0 0 0 1px hsla(0, 0%, 0%, 0.4),
+    0 1px 1px hsla(0, 0%, 100%, 0.8);
+  content: '';
+  display: block;
+  height: var(--size, 7px);
+  left: 3px;
+  position: relative;
+  top: 9px;
+  width: var(--size, 7px);
+  border: none;
+}
+input[type='radio']:checked:after {
+  /* background-color: #e22837; */
+  background-color: #0e385d;
+  box-shadow: inset 0 0 0 1px hsla(0, 0%, 0%, 0.4),
+    inset 0 2px 2px hsla(0, 0%, 100%, 0.4), 0 1px 1px hsla(0, 0%, 100%, 0.8),
+    0 0 2px 2px hsla(224, 70%, 70%, 0.4);
+  outline: none;
+}

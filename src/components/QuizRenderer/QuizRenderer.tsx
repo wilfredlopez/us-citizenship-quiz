@@ -29,7 +29,6 @@ export const QuizRenderer = ({ questions, maxQuestions = 100, mode = 'test', inS
     const [displayHighlight, setDisplayHighlight] = useState(false)
     const [message, setMessage] = useState<MessageType>(null)
 
-
     const currentQuestion = useMemo(() => questions[currentIndex], [currentIndex, questions])
 
 
@@ -46,16 +45,17 @@ export const QuizRenderer = ({ questions, maxQuestions = 100, mode = 'test', inS
     }
 
 
-    function goToNext() {
+    function goToNext(totalCorrectAfter = totalCorrect) {
         if (isLastQuestion()) {
             //NAVIGATE TO RESULTS PAGE
             console.warn(`[LAST_QUESTION]: Should navigate to results.`)
             history.push('/quiz/results', {
-                totalCorrect,
+                totalCorrect: totalCorrectAfter,
                 totalQuestions: maxQuestions
             })
             return
         }
+        setTotalCorrect(totalCorrectAfter)
         setCurrentIndex(i => (i + 1) % questions.length)
         setEnableNext(false)
         setMessage(null)
@@ -77,13 +77,12 @@ export const QuizRenderer = ({ questions, maxQuestions = 100, mode = 'test', inS
             const selectedAnswer = currentQuestion.options[selectedOptionIndex]
             if (currentQuestion.isCorrectAnswer(selectedAnswer)) {
                 // console.log("GOOD ANSWER")
-                setTotalCorrect(t => t + 1)
+                // setTotalCorrect(t => t + 1)
                 setMessage("Correct!")
                 setEnableNext(true)
                 if (mode === 'test') {
                     setTimeout(() => {
-
-                        goToNext()
+                        goToNext(totalCorrect + 1)
                     }, 1000)
                 }
             } else {

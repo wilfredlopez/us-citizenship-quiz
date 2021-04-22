@@ -27,7 +27,7 @@ function Layout(props: PropsWithChildren<{}>) {
                 {props.children}
             </main>
 
-            <footer>
+            <footer className="pt-3 pb-3">
                 <div className="container p-3">
                     <h4>Resources</h4>
                     <ul className="mt-1">
@@ -43,7 +43,20 @@ function Layout(props: PropsWithChildren<{}>) {
 
             </footer>
             <section id="copyright-section">
-                US Citizenship Quiz &copy;2021
+                <p></p>
+                <p></p>
+                <p>
+                    US Citizenship Quiz &copy;2021
+                </p>
+                <p>
+                    <small>By Wilfred Lopez </small>
+                </p>
+                <p>
+                    <a
+                        target="_blank"
+                        rel="noreferrer"
+                        href="https://wilfredlopez.net" className="styled-link">www.wilfredlopez.net</a>
+                </p>
             </section>
         </div>
     )

@@ -7,6 +7,7 @@
   --colorSecondary: #0e385d;
   --colorSecondaryDark: #0d3355;
   --colorSecondaryLight: #114470;
+  --colorSecondaryLightess: #4e9ee4;
   --colorInfo: #2d869c;
   --colorInfoDark: #257083;
   --colorInfoLight: #359bb4;
@@ -200,7 +201,7 @@ main {
   width: 100%;
   background: black;
   color: white;
-  padding: 1rem;
+  padding: 2rem 1rem;
 }
 
 .btn {
@@ -321,7 +322,10 @@ main {
   cursor: pointer;
   text-decoration: none;
 }
-
+.styled-link {
+  color: var(--colorSecondaryLightess);
+  cursor: pointer;
+}
 .danger {
   color: red;
 }
