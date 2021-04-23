@@ -9,6 +9,7 @@ interface Props {
 
 }
 
+
 export const Home = (props: Props) => {
     useEffect(() => {
         document.title = 'Home | US Citizenship Quiz'

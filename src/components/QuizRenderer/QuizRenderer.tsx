@@ -6,6 +6,7 @@ import { QuizFooter } from './QuizFooter'
 import { QuizForm } from './QuizForm'
 import { QuizHeader } from './QuizHeader'
 import { MessageType, RenderMode } from './QuizRenderer.interface'
+import { SoundEffectPlayer } from '../../model/SoundEffectPlayer'
 
 export interface QuizRendererProps {
     questions: Question[]
@@ -14,6 +15,7 @@ export interface QuizRendererProps {
     maxQuestions?: number
 }
 
+const soundEffectPlayer = new SoundEffectPlayer()
 
 
 export const QuizRenderer = ({ questions, maxQuestions = 100, mode = 'test', inSpanish = false }: QuizRendererProps) => {
@@ -38,6 +40,7 @@ export const QuizRenderer = ({ questions, maxQuestions = 100, mode = 'test', inS
             left: 0,
             behavior: 'smooth'
         })
+        soundEffectPlayer.init()
     }, [])
 
     function handleAnswerClick(index: number) {
@@ -79,6 +82,7 @@ export const QuizRenderer = ({ questions, maxQuestions = 100, mode = 'test', inS
                 // console.log("GOOD ANSWER")
                 // setTotalCorrect(t => t + 1)
                 setMessage("Correct!")
+                soundEffectPlayer.play('good')
                 setEnableNext(true)
                 if (mode === 'test') {
                     setTimeout(() => {
@@ -88,6 +92,7 @@ export const QuizRenderer = ({ questions, maxQuestions = 100, mode = 'test', inS
             } else {
                 // console.log("BAD ANSWER")
                 setMessage("Incorrect!")
+                soundEffectPlayer.play('wrong')
                 setDisplayHighlight(true)
                 if (mode === 'test') {
                     setTimeout(() => {

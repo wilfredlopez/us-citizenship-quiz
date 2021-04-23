@@ -11,7 +11,7 @@ export const QuizWrapper = (props: PropsWithChildren<{}>) => {
                 backgroundSize: 'contain',
                 width: "100vw",
                 maxWidth: '100%',
-                backgroundRepeat: "no-repeat",
+                backgroundRepeat: "repeat no-repeat",
                 overflowY: 'hidden'
             }}
         >
