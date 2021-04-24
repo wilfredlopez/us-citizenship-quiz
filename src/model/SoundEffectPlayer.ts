@@ -67,6 +67,6 @@ export class SoundEffectPlayer {
     }
 
     play(soundId: SoundEffectPlayerKeys) {
-        this.sounds[soundId]?.play()
+        this.sounds[soundId]?.play().catch(e => console.error(e))
     }
 }

@@ -27,17 +27,18 @@ export const QuizForm = ({ handleSubmit, inSpanish, currentQuestion, enableSubmi
                 <h5 className="q-title">{currentQuestion.text}</h5>
             </div>
             <form onSubmit={handleSubmit}>
-                <ol className="pl-3">
+                <ul className="pl-3 radio-toolbar">
                     {currentQuestion.options.map((op, i) => {
-                        return <li key={op + currentQuestion.number} >
+                        return <li key={op + currentQuestion.number}>
                             <input
+
                                 id={op}
                                 name={currentQuestion.number.toString()}
                                 type="radio" onClick={() => handleAnswerClick(i)}></input>
                             <label htmlFor={op} className={displayHighlight && shouldDisplayHighlight(op, currentQuestion, displayHighlight) ? 'highlight-q' : ''}>{op}</label>
                         </li>
                     })}
-                </ol>
+                </ul>
                 <div className="submit-btn-container mt-2">
                     <button
                         disabled={!enableSubmit}

@@ -98,7 +98,7 @@ export const QuizRenderer = ({ questions, maxQuestions = 100, mode = 'test', inS
                     setTimeout(() => {
                         setEnableNext(true)
                         goToNext()
-                    }, 2000)
+                    }, 1800)
                 } else {
                     setEnableNext(true)
                     setEnableSubmit(true)

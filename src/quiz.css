@@ -62,9 +62,15 @@ label {
 }
 
 .highlight-q {
-  color: blue;
+  /* color: blue; */
+  color: #feffbf !important;
 }
-
+/* 
+input[type='radio'] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
 input[type='radio' i] {
   cursor: pointer;
   margin: 3px 3px 3px 3px;
@@ -75,8 +81,8 @@ input[type='radio' i] {
   width: 20px;
   -moz-appearance: none;
   -webkit-appearance: none;
-  outline: none;
   appearance: none;
+  outline: none;
 }
 
 input[type='radio']:after {
@@ -95,10 +101,73 @@ input[type='radio']:after {
   border: none;
 }
 input[type='radio']:checked:after {
-  /* background-color: #e22837; */
   background-color: #0e385d;
   box-shadow: inset 0 0 0 1px hsla(0, 0%, 0%, 0.4),
     inset 0 2px 2px hsla(0, 0%, 100%, 0.4), 0 1px 1px hsla(0, 0%, 100%, 0.8),
     0 0 2px 2px hsla(224, 70%, 70%, 0.4);
   outline: none;
+} */
+
+/****OTHER*******/
+
+:root {
+  --toolbar-hover-primary: #fb4646;
+  --toolbar-hover-primary-shade: #dd3e3e;
+  --toolbar-hover-primary-tint: #fb5c5c;
+  --toolbar-hover-primary-contrast: #ffffff;
+  --toolbar-hover-primary-contrast-rgb: rgb(255, 255, 255);
+  --toolbar-primary: #1a1a1a;
+  --toolbar-primary-shade: #000000;
+  --toolbar-primary-tint: #1b1b1b;
+  --toolbar-primary-contrast: #ffffff;
+  --toolbar-primary-contrast-rgb: rgb(255, 255, 255);
+}
+
+/*Removing the default radio button*/
+.radio-toolbar input[type='radio'] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+.radio-toolbar label {
+  display: inline-block;
+  background: linear-gradient(
+    45deg,
+    var(--toolbar-primary-tint),
+    var(--toolbar-primary) 35%,
+    var(--toolbar-primary-shade)
+  );
+  padding: 10px 20px;
+  font-family: sans-serif, Arial;
+  font-size: 16px;
+  /* border: 2px solid #000000; */
+  border: none;
+  border-radius: 5px;
+  margin: 6px 0px;
+  color: var(--toolbar-primary-contrast);
+  cursor: pointer;
+}
+.radio-toolbar input[type='radio']:checked + label {
+  background: linear-gradient(
+    45deg,
+    var(--toolbar-hover-primary-tint),
+    var(--toolbar-hover-primary) 35%,
+    var(--toolbar-hover-primary-shade)
+  );
+  /* border-color: #000000; */
+  border: none;
+}
+.radio-toolbar input[type='radio']:focus + label {
+  /* border: 2px dashed rgb(0, 0, 0); */
+  border: none;
+}
+
+.radio-toolbar label:hover {
+  background: linear-gradient(
+    45deg,
+    var(--toolbar-hover-primary-tint),
+    var(--toolbar-hover-primary) 35%,
+    var(--toolbar-hover-primary-shade)
+  );
+  color: var(--toolbar-hover-primary-contrast);
 }
