@@ -1,3 +1,19 @@
+:root {
+  --toolbar-hover-primary: #e72735;
+  --toolbar-hover-primary-shade: #d4293b;
+  --toolbar-hover-primary-tint: #ff494a;
+  --toolbar-hover-primary-contrast: #ffffff;
+  --toolbar-hover-primary-contrast-rgb: rgb(255, 255, 255);
+  --toolbar-primary: #2e2e2f;
+  --toolbar-primary-shade: #1d1d1f;
+  --toolbar-primary-tint: #3c3c3e;
+  --toolbar-primary-contrast: #ffffff;
+  --toolbar-primary-contrast-rgb: rgb(255, 255, 255);
+  --highligh-color: #feffbf;
+  --submit-color: #0e385d;
+  --submit-color-tint: #155792;
+  --submit-color-shade: #0a253d;
+}
 .q-title {
   font-size: 1.65rem;
 }
@@ -18,13 +34,31 @@ label {
   display: flex;
   justify-content: center;
   padding-top: 1rem;
-  background: linear-gradient(45deg, #155792, #0e385d 35%, #0a253d);
+  background: linear-gradient(
+    45deg,
+    var(--submit-color-tint),
+    var(--submit-color) 35%,
+    var(--submit-color-shade)
+  );
   color: white;
 }
 
+.btn-submit:hover {
+  background: linear-gradient(
+    45deg,
+    var(--submit-color-tint),
+    var(--submit-color-tint) 35%,
+    var(--submit-color-shade)
+  );
+}
 .btn-submit:disabled,
 .btn-submit:hover.btn-submit:disabled {
-  background: linear-gradient(45deg, #155792, #0e385d 35%, #0a253d);
+  background: linear-gradient(
+    45deg,
+    var(--submit-color-tint),
+    var(--submit-color-tint) 35%,
+    var(--submit-color-shade)
+  );
   color: white;
   opacity: 0.5;
 }
@@ -63,7 +97,7 @@ label {
 
 .highlight-q {
   /* color: blue; */
-  color: #feffbf !important;
+  color: var(--highligh-color) !important;
 }
 /* 
 input[type='radio'] {
@@ -110,19 +144,6 @@ input[type='radio']:checked:after {
 
 /****OTHER*******/
 
-:root {
-  --toolbar-hover-primary: #fb4646;
-  --toolbar-hover-primary-shade: #dd3e3e;
-  --toolbar-hover-primary-tint: #fb5c5c;
-  --toolbar-hover-primary-contrast: #ffffff;
-  --toolbar-hover-primary-contrast-rgb: rgb(255, 255, 255);
-  --toolbar-primary: #1a1a1a;
-  --toolbar-primary-shade: #000000;
-  --toolbar-primary-tint: #1b1b1b;
-  --toolbar-primary-contrast: #ffffff;
-  --toolbar-primary-contrast-rgb: rgb(255, 255, 255);
-}
-
 /*Removing the default radio button*/
 .radio-toolbar input[type='radio'] {
   opacity: 0;
@@ -151,7 +172,7 @@ input[type='radio']:checked:after {
   background: linear-gradient(
     45deg,
     var(--toolbar-hover-primary-tint),
-    var(--toolbar-hover-primary) 35%,
+    var(--toolbar-hover-primary) 45%,
     var(--toolbar-hover-primary-shade)
   );
   /* border-color: #000000; */
@@ -163,11 +184,17 @@ input[type='radio']:checked:after {
 }
 
 .radio-toolbar label:hover {
-  background: linear-gradient(
+  /* background: linear-gradient(
     45deg,
     var(--toolbar-hover-primary-tint),
-    var(--toolbar-hover-primary) 35%,
+    var(--toolbar-hover-primary) 45%,
     var(--toolbar-hover-primary-shade)
+  ); */
+  background: linear-gradient(
+    45deg,
+    var(--toolbar-primary-tint),
+    var(--toolbar-primary-tint) 45%,
+    var(--toolbar-primary)
   );
   color: var(--toolbar-hover-primary-contrast);
 }

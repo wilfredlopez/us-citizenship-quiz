@@ -1256,6 +1256,6 @@ const esQuestionsConstructor: QuestionContructor[] = [
     }
 ]
 
-export const questionsSpanish2020 = esQuestionsConstructor.map(obj => new Question(obj))
+export const questionsSpanish2020 = esQuestionsConstructor.map(params => new Question(params))
 
 

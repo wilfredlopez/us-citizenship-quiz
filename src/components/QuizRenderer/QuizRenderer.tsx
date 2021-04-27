@@ -40,7 +40,7 @@ export const QuizRenderer = ({ questions, maxQuestions = 100, mode = 'test', inS
             left: 0,
             behavior: 'smooth'
         })
-        soundEffectPlayer.init()
+        soundEffectPlayer.init().setVolume(0.20)
     }, [])
 
     function handleAnswerClick(index: number) {
@@ -51,7 +51,6 @@ export const QuizRenderer = ({ questions, maxQuestions = 100, mode = 'test', inS
     function goToNext(totalCorrectAfter = totalCorrect) {
         if (isLastQuestion()) {
             //NAVIGATE TO RESULTS PAGE
-            console.warn(`[LAST_QUESTION]: Should navigate to results.`)
             history.push('/quiz/results', {
                 totalCorrect: totalCorrectAfter,
                 totalQuestions: maxQuestions
@@ -79,8 +78,6 @@ export const QuizRenderer = ({ questions, maxQuestions = 100, mode = 'test', inS
             setEnableSubmit(false)
             const selectedAnswer = currentQuestion.options[selectedOptionIndex]
             if (currentQuestion.isCorrectAnswer(selectedAnswer)) {
-                // console.log("GOOD ANSWER")
-                // setTotalCorrect(t => t + 1)
                 setMessage("Correct!")
                 soundEffectPlayer.play('good')
                 setEnableNext(true)
@@ -88,6 +85,8 @@ export const QuizRenderer = ({ questions, maxQuestions = 100, mode = 'test', inS
                     setTimeout(() => {
                         goToNext(totalCorrect + 1)
                     }, 1000)
+                } else {
+                    setTotalCorrect(t => t + 1)
                 }
             } else {
                 // console.log("BAD ANSWER")

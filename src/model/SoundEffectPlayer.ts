@@ -8,17 +8,19 @@ export interface SoundEffectPlayerOptions {
     rootID?: string
 }
 
-export type SoundEffectPlayerKeys = 'good' | 'wrong'
+// export type SoundEffectPlayerKeys = 'good' | 'wrong'
+export type SoundEffectPlayerKeys = typeof SoundEffectPlayer['GOOD_KEY'] | typeof SoundEffectPlayer['WRONG_KEY']
 
 const ROOT_SYMBOL = Symbol('sound_effect_player_root')
 
 
-
 export class SoundEffectPlayer {
-    goodEffectURL: string
-    wrongEffectURL: string
-    sounds: Partial<Record<SoundEffectPlayerKeys, HTMLAudioElement>> = {}
-    rootID: string
+    private static GOOD_KEY = 'good' as const
+    private static WRONG_KEY = 'wrong' as const
+    private goodEffectURL: string
+    private wrongEffectURL: string
+    private sounds: Partial<Record<SoundEffectPlayerKeys, HTMLAudioElement>> = {}
+    private rootID: string
     constructor({
         goodEffectURL = GOOD_SOUND_URL,
         wrongEffectURL = WRONG_SOUND_URL,
@@ -29,6 +31,14 @@ export class SoundEffectPlayer {
         this.rootID = rootID
     }
 
+
+    private setSoundUrl(src: string, key: SoundEffectPlayerKeys) {
+        const sound = this.sounds[key]
+        if (sound) {
+            sound.src = src
+        }
+        return this
+    }
     private isRootInDocument() {
         const div = document.getElementById(this.rootID) as (HTMLDivElement & { [ROOT_SYMBOL]: Symbol }) | null
         if (div === undefined || div === null) {
@@ -37,15 +47,16 @@ export class SoundEffectPlayer {
         if (div[ROOT_SYMBOL] === ROOT_SYMBOL) {
             return true
         }
-
         return false
-
-
     }
+
+    /*________________________________
+            PUBLIC METHODS
+    ---------------------------------*/
 
     init() {
         if (this.isRootInDocument()) {
-            return
+            return this
         }
         //create
         const root = document.createElement('div') as HTMLDivElement & { [ROOT_SYMBOL]: Symbol }
@@ -62,11 +73,34 @@ export class SoundEffectPlayer {
         root.appendChild(goodAudio)
         root.appendChild(wrongAudio)
         document.body.appendChild(root)
-        this.sounds['good'] = goodAudio
-        this.sounds['wrong'] = wrongAudio
+        this.sounds[SoundEffectPlayer.GOOD_KEY] = goodAudio
+        this.sounds[SoundEffectPlayer.WRONG_KEY] = wrongAudio
+        return this
     }
 
     play(soundId: SoundEffectPlayerKeys) {
         this.sounds[soundId]?.play().catch(e => console.error(e))
+    }
+    /**
+     * values must fall between 0 and 1, where 0 is effectively muted and 1 is the loudest possible value.
+     * @param vol 
+     * @returns 
+     */
+    setVolume(vol: number) {
+        for (const key in this.sounds) {
+            const sound = this.sounds[key as SoundEffectPlayerKeys]
+            if (sound?.volume !== undefined) {
+                sound.volume = vol
+            }
+        }
+        return this
+    }
+
+    setGoodSoundUrl(src: string) {
+        return this.setSoundUrl(src, SoundEffectPlayer.GOOD_KEY)
+    }
+
+    setWrongSoundUrl(src: string) {
+        return this.setSoundUrl(src, SoundEffectPlayer.WRONG_KEY)
     }
 }

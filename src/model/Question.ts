@@ -7,6 +7,9 @@ const mapLowerTrim = (a: string) => a.toLowerCase().trim()
 const mapProperCase = (a: string) => a[0].toUpperCase() + a.substr(1)
 
 export type QuestionType = 'select' | 'input' | 'multi'
+
+const question_types: readonly QuestionType[] = ["select", "input", "multi"] as const
+
 export interface QuestionContructor {
     text: string,
     number: number,
@@ -16,12 +19,21 @@ export interface QuestionContructor {
     tip?: string
 }
 export class Question {
-    text: string
     private _answers: string[]
     private _options: string[]
-    type: QuestionType
-    tip: string
+    private _type: QuestionType
     private _number: number
+    text: string
+    tip: string
+
+    get type() {
+        return this._type
+    }
+    set type(type: QuestionType) {
+        if (question_types.includes(type)) {
+            this._type = type
+        }
+    }
 
     get options() {
         return this._options.map(mapProperCase)
@@ -48,7 +60,7 @@ export class Question {
         this._options = options.map(mapLowerTrim)
         //make options be in random order.
         this._options = shuffle(this.options)
-        this.type = type
+        this._type = type
         this.tip = tip
         this._number = number
     }

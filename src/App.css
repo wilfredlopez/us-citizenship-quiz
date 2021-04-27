@@ -1,16 +1,25 @@
 :root {
   --colorPrimary: #f14f4f;
+  --colorPrimaryContrast: #ffffff;
   --colorPrimaryLight: #ff8282;
   --colorPrimaryDark: rgb(206, 66, 66);
   --colorDark: #141414;
   --colorLight: #fdfdfd;
-  --colorSecondary: #0e385d;
-  --colorSecondaryDark: #0d3355;
-  --colorSecondaryLight: #114470;
-  --colorSecondaryLightess: #4e9ee4;
+  --colorTertiary: #0e385d;
+  --colorTertiaryDark: #0a253d;
+  --colorTertiaryLight: #155792;
+  --colorTertiaryLightess: #4e9ee4;
+  --colorSecondary: #e72735;
+  --colorSecondaryDark: #d4293b;
+  --colorSecondaryLight: #ff494a;
+  --colorSecondaryLightess: #ff7170;
+  --colorSecondaryContrast: #ffffff;
   --colorInfo: #2d869c;
   --colorInfoDark: #257083;
   --colorInfoLight: #359bb4;
+  --colorFlag: #1a2e5b;
+  --colorFlagShade: #142346;
+  --colorFlagTint: #243e79;
 }
 
 .text-start {
@@ -85,7 +94,13 @@ header,
 footer {
   color: white;
   padding: 1rem;
-  background-color: var(--colorSecondary);
+  /* background-color: var(--colorSecondary); */
+  background: linear-gradient(
+    45deg,
+    var(--colorFlagTint),
+    var(--colorFlag) 35%,
+    var(--colorFlagShade)
+  );
 }
 
 main {
@@ -249,30 +264,30 @@ main {
 
 .btn-primary {
   background-color: var(--colorPrimary);
-  color: white;
+  color: var(--colorPrimaryContrast);
 }
 .btn-primary:disabled,
 .btn-primary:disabled.btn-primary:hover {
   background-color: var(--colorPrimaryLight);
-  color: white;
+  color: var(--colorPrimaryContrast);
   opacity: 0.6;
 }
 .btn-primary:hover {
   background-color: var(--colorPrimaryDark);
-  color: white;
+  color: var(--colorPrimaryContrast);
 }
 
 .btn-secondary {
   background-color: var(--colorSecondary);
-  color: white;
+  color: var(--colorSecondaryContrast);
 }
 .btn-secondary:disabled {
   background-color: var(--colorSecondaryLight);
-  color: white;
+  color: var(--colorSecondaryContrast);
 }
 .btn-secondary:hover {
   background-color: var(--colorSecondaryDark);
-  color: white;
+  color: var(--colorSecondaryContrast);
 }
 
 .btn-info {
@@ -300,6 +315,9 @@ main {
   color: var(--colorInfoDark);
   opacity: 1;
 }
+.btn:disabled {
+  opacity: 0.9;
+}
 .btn-info-outline:disabled,
 .btn-info-outline:disabled.btn-info-outline:hover {
   border: 1px solid var(--colorInfoLight);
@@ -323,7 +341,7 @@ main {
   text-decoration: none;
 }
 .styled-link {
-  color: var(--colorSecondaryLightess);
+  color: var(--colorInfoLight);
   cursor: pointer;
 }
 .danger {
@@ -335,22 +353,25 @@ main {
   text-transform: none;
 }
 
-/* <shape xmlns:android="http://schemas.android.com/apk/res/android">
-<gradient
-    android:angle="45"
-    android:centerX="35%"
-    android:centerColor="#0e385d"
-    android:startColor="#155792"
-    android:endColor="#0a253d"
-    android:type="linear" />
-</shape> */
 .gradient-blue-bg {
-  background: linear-gradient(45deg, #155792, #0e385d 35%, #0a253d);
+  --one: var(--colorSecondaryLight);
+  --two: var(--colorSecondary);
+  --three: var(--colorSecondaryDark);
+  background: linear-gradient(45deg, var(--one), var(--two) 35%, var(--three));
 }
 
 .btn-gradient {
-  background: linear-gradient(45deg, #155792, #0e385d 35%, #0a253d);
+  /* --one: #155792; */
+  --one: var(--colorTertiaryLight);
+  /* --two: #0e385d; */
+  --two: var(--colorTertiary);
+  /* --three: #0a253d; */
+  --three: var(--colorTertiaryDark);
+  background: linear-gradient(45deg, var(--one), var(--two) 35%, var(--three));
   color: white;
+}
+.btn-gradient:hover {
+  background: linear-gradient(45deg, var(--one), var(--one) 35%, var(--three));
 }
 
 .card-circle {
