@@ -54,6 +54,15 @@ export class SoundEffectPlayer {
             PUBLIC METHODS
     ---------------------------------*/
 
+    setMuted(mute = true) {
+        for (const key in this.sounds) {
+            const sound = this.sounds[key as SoundEffectPlayerKeys]
+            if (sound !== undefined) {
+                sound.muted = mute
+            }
+        }
+        return this
+    }
     init() {
         if (this.isRootInDocument()) {
             return this
@@ -91,6 +100,7 @@ export class SoundEffectPlayer {
             const sound = this.sounds[key as SoundEffectPlayerKeys]
             if (sound?.volume !== undefined) {
                 sound.volume = vol
+                sound.muted = false
             }
         }
         return this

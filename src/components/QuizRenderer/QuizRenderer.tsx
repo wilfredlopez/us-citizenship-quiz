@@ -7,6 +7,7 @@ import { QuizForm } from './QuizForm'
 import { QuizHeader } from './QuizHeader'
 import { MessageType, RenderMode } from './QuizRenderer.interface'
 import { SoundEffectPlayer } from '../../model/SoundEffectPlayer'
+import { VolumeIcon } from '../VolumeIcon'
 
 export interface QuizRendererProps {
     questions: Question[]
@@ -28,6 +29,7 @@ export const QuizRenderer = ({ questions, maxQuestions = 100, mode = 'test', inS
     const [enableNext, setEnableNext] = useState(false)
     const [enableSubmit, setEnableSubmit] = useState(true)
     const [revealAnswers, setRevealAnswers] = useState(false)
+    const [muted, setMuted] = useState(false)
     const [displayHighlight, setDisplayHighlight] = useState(false)
     const [message, setMessage] = useState<MessageType>(null)
 
@@ -106,10 +108,30 @@ export const QuizRenderer = ({ questions, maxQuestions = 100, mode = 'test', inS
         }
     }
 
+
+    function toggleMuted() {
+        if (muted) {
+            soundEffectPlayer.setMuted(false)
+        } else {
+            soundEffectPlayer.setMuted(true)
+        }
+        setMuted(c => !c)
+    }
+
+
+
     return (
         <div className="container">
             <div className="container-md">
+
                 <QuizHeader maxQuestions={maxQuestions} mode={mode} totalCorrect={totalCorrect} />
+                <button
+                    className="btn-transparent flex-end-btn"
+                    onClick={() => {
+                        toggleMuted()
+                    }}>
+                    <VolumeIcon className="volume-icon-svg" muted={muted} />
+                </button>
                 <QuizForm
                     inSpanish={inSpanish}
                     currentQuestion={currentQuestion}
