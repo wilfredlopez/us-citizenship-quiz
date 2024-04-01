@@ -15,7 +15,7 @@ interface Props {
 }
 
 
-export const Home = (props: Props) => {
+export const Home = (_props: Props) => {
     useEffect(() => {
         document.title = 'Home | US Citizenship Quiz'
     }, [])
