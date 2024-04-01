@@ -1,8 +1,13 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
-import flagBackground from '../assets/flag_background_1.png'
-import uscis from '../assets/uscis.png'
+
+// import flagBackground from '../assets/flag_background_1.png'
+// const flagBackground = new URL('/flag_background_1.png', import.meta.url).href
+const flagBackground = '/flag_background_1.png'
+// import uscis from '../assets/uscis.png'
+// const uscis = new URL('/uscis.png', import.meta.url).href
+const uscis = '/uscis.png'
 import './home.css'
 
 interface Props {

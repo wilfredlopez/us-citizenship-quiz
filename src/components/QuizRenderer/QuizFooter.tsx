@@ -13,7 +13,7 @@ interface Props {
 }
 
 
-export const QuizFooter = ({ enableNext, inSpanish, goToNext, revealAnswers, setRevealAnswers, currentQuestion, showFooter }: Props) => {
+export const QuizFooter = ({  inSpanish, goToNext, revealAnswers, setRevealAnswers, currentQuestion, showFooter }: Props) => {
     if (!showFooter) {
         return null
     }

@@ -1,6 +1,7 @@
 import { PropsWithChildren } from 'react'
-import flagBackground from '../assets/flag_background_1.png'
-
+// import flagBackground from '../assets/flag_background_1.png'
+// const flagBackground = new URL('/flag_background_1.png', import.meta.url).href
+const flagBackground = '/flag_background_1.png'
 
 export const QuizWrapper = (props: PropsWithChildren<{}>) => {
     return (

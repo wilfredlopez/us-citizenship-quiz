@@ -1,4 +1,3 @@
-import React from 'react'
 import { getPercent } from '../../utils/getPercent'
 import { RenderMode } from './QuizRenderer.interface'
 

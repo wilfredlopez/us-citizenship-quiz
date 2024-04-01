@@ -1,15 +1,17 @@
 import { useMemo } from 'react'
-import { RouteChildrenProps } from 'react-router-dom'
 import { ArrowBackIcon } from '../components/ArrowBackIcon'
 import { QuizWrapper } from '../components/QuizWrapper'
 import { getPercent } from '../utils/getPercent'
+import { useLocation, Location } from 'react-router-dom';
 
 
 interface StateProps { totalCorrect: number, totalQuestions: number }
 
 
-export const ResultsPage = (props: RouteChildrenProps<{}, StateProps>) => {
-    const { totalCorrect = 0, totalQuestions = 0 } = props.location?.state || {}
+export const ResultsPage = (_: StateProps) => {
+    const location:Location<StateProps> = useLocation()
+    
+    const { totalCorrect = 0, totalQuestions = 0 } = location?.state || {}
 
     const percent = useMemo(() => {
         return getPercent(totalCorrect, totalQuestions)
@@ -36,7 +38,7 @@ export const ResultsPage = (props: RouteChildrenProps<{}, StateProps>) => {
                     </div>
                 </section>
                 <section className="flex flex-center mt-2">
-                    <button className="btn btn-secondary" onClick={() => props.history.goBack()}>
+                    <button className="btn btn-secondary" onClick={() => window.history.back()}>
                         <ArrowBackIcon width={15} /> &nbsp; Go Back
                     </button>
                 </section>

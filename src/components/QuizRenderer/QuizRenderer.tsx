@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 import { Question } from '../../model/Question'
 import { QuizFooter } from './QuizFooter'
@@ -20,7 +20,8 @@ const soundEffectPlayer = new SoundEffectPlayer()
 
 export const QuizRenderer = ({ questions, maxQuestions = 100, mode = 'test', inSpanish = false }: QuizRendererProps) => {
 
-    const history = useHistory()
+    // const history = useHistory()
+    const history = useNavigate()
 
     const [currentIndex, setCurrentIndex] = useState(0)
     const [totalCorrect, setTotalCorrect] = useState(0)
@@ -51,9 +52,11 @@ export const QuizRenderer = ({ questions, maxQuestions = 100, mode = 'test', inS
     function goToNext(totalCorrectAfter = totalCorrect) {
         if (isLastQuestion()) {
             //NAVIGATE TO RESULTS PAGE
-            history.push('/quiz/results', {
-                totalCorrect: totalCorrectAfter,
-                totalQuestions: maxQuestions
+            history('/quiz/results', {
+                state: {
+                    totalCorrect: totalCorrectAfter,
+                    totalQuestions: maxQuestions
+                }
             })
             return
         }
