@@ -29,7 +29,17 @@
 .flex {
   display: flex;
 }
-
+.btn-transparent {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: transparent;
+  -webkit-appearance: none;
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  -webkit-tap-highlight-color: transparent;
+}
 .flex-center {
   display: flex;
   justify-content: center;
@@ -39,6 +49,27 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+}
+.flex-end-btn {
+  justify-self: flex-end;
+  align-items: flex-end;
+  display: flex;
+  justify-content: flex-end;
+  align-content: flex-end;
+  text-align: right;
+  margin: 1rem auto;
+  width: 100%;
+}
+
+.volume-icon-svg {
+  --volume-icon-svg-color: #172b52;
+  fill: none;
+  stroke: var(--volume-icon-svg-color);
+}
+.volume-icon-svg:hover {
+  --volume-icon-svg-color: #ca2e2e;
+  /* fill: var(--volume-icon-svg-color); */
+  stroke: var(--volume-icon-svg-color);
 }
 
 footer a,
@@ -243,6 +274,7 @@ main {
   justify-content: center;
   text-decoration: none;
   -webkit-appearance: none;
+
   -webkit-tap-highlight-color: transparent;
   background-color: #f7f8f8;
 }
