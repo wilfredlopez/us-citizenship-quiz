@@ -43,32 +43,32 @@ export const Home = (_props: Props) => {
 
                         <h2 className="mt-1 mb-1 text-start">Available Quizes: </h2>
                         <div className="flex">
-                            <Link to="/quiz/2020" className="unstyled-link">
+                            <Link to="/quiz/2024" className="unstyled-link">
                                 <button className="btn text-normal btn-gradient">
-                                    US Civics Quiz  2020
+                                    US Civics Quiz  2024
                                 </button>
                             </Link>
 
                         </div>
                         <div className="flex mt-1">
-                            <Link to="/quiz/es/2020" className="unstyled-link">
+                            <Link to="/quiz/es/2024" className="unstyled-link">
                                 <button className="btn text-normal btn-gradient">
-                                    US Civics Quiz  2020 (Spanish)
+                                    US Civics Quiz  2024 (Spanish)
                                 </button>
                             </Link>
 
                         </div>
                         <div className="flex mt-1">
-                            <Link to="/quiz/practice/2020" className="unstyled-link">
+                            <Link to="/quiz/practice/2024" className="unstyled-link">
                                 <button className="btn text-normal btn-gradient">
-                                    US Civics Quiz 2020 (Practice Mode)
+                                    US Civics Quiz 2024 (Practice Mode)
                                 </button>
                             </Link>
                         </div>
                         <div className="flex mt-1">
-                            <Link to="/quiz/es/practice/2020" className="unstyled-link">
+                            <Link to="/quiz/es/practice/2024" className="unstyled-link">
                                 <button className="btn text-normal btn-gradient">
-                                    US Civics Quiz 2020 (Spanish Practice Mode)
+                                    US Civics Quiz 2024 (Spanish Practice Mode)
                                 </button>
                             </Link>
                         </div>
@@ -77,17 +77,17 @@ export const Home = (_props: Props) => {
                     <div className="container-sm card mt-1">
                         <h2 className="mt-1 mb-1 text-start">10 Random Questions: </h2>
                         <div className="flex flex-center">
-                            <Link to="/random/2020" className="unstyled-link">
+                            <Link to="/random/2024" className="unstyled-link">
                                 <button className="btn text-normal btn-gradient">
-                                    2020 (EN)
+                                    2024 (EN)
                                 </button>
                             </Link>
 
                         </div>
                         <div className="flex flex-center mt-1">
-                            <Link to="/random/es/2020" className="unstyled-link">
+                            <Link to="/random/es/2024" className="unstyled-link">
                                 <button className="btn text-normal btn-gradient">
-                                    2020 (ES)
+                                    2024 (ES)
                                 </button>
                             </Link>
 
