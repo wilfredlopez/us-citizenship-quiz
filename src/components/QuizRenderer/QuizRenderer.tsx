@@ -13,12 +13,13 @@ export interface QuizRendererProps {
     mode?: RenderMode
     inSpanish?: boolean
     maxQuestions?: number
+    title?: string
 }
 
 const soundEffectPlayer = new SoundEffectPlayer()
 
 
-export const QuizRenderer = ({ questions, maxQuestions = 100, mode = 'test', inSpanish = false }: QuizRendererProps) => {
+export const QuizRenderer = ({ title, questions, maxQuestions = 100, mode = 'test', inSpanish = false }: QuizRendererProps) => {
 
     // const history = useHistory()
     const history = useNavigate()
@@ -111,6 +112,7 @@ export const QuizRenderer = ({ questions, maxQuestions = 100, mode = 'test', inS
 
     return (
         <div className="container">
+            <h1>{title}</h1>
             <div className="container-md">
                 <QuizHeader maxQuestions={maxQuestions} mode={mode} totalCorrect={totalCorrect} />
                 <QuizForm

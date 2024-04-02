@@ -5,27 +5,26 @@ import {
 
 import { Home } from './pages/Home'
 import { ResultsPage } from './pages/ResultsPage'
-import { QuizRenderer, QuizRendererProps } from './components/QuizRenderer/QuizRenderer'
-import { QuizWrapper } from './components/QuizWrapper'
 import { questionsSpanish } from './data/questionsSpanish'
 import { allQuestions } from './data/allQuestions'
 import { shuffle } from './utils/shuffle'
-import { useEffect } from 'react'
 import Layout from "./Layout";
+import CategoryPage from "./pages/CategoryPage";
+import QuizPageGenerator from "./components/QuizPageGenerator";
 
 
 const random10 = shuffle(allQuestions).slice(0, 10)
 const random10Es = shuffle(questionsSpanish).slice(0, 10)
 
-const QuizPageGenerator = ({ title = "", ...rest }: QuizRendererProps & {
-    title?: string
-}) => {
-    useEffect(() => {
-        const docTitle = title ? title + ' | US Citizenship Quiz' : 'US Citizenship Quiz'
-        window.document.title = docTitle
-    }, [title])
-    return (<QuizWrapper> <QuizRenderer {...rest} /></QuizWrapper>)
-}
+// const QuizPageGenerator = ({ title = "", ...rest }: QuizRendererProps & {
+//     title?: string
+// }) => {
+//     useEffect(() => {
+//         const docTitle = title ? title + ' | US Citizenship Quiz' : 'US Citizenship Quiz'
+//         window.document.title = docTitle
+//     }, [title])
+//     return (<QuizWrapper> <QuizRenderer {...rest} /></QuizWrapper>)
+// }
 
 
 
@@ -61,6 +60,10 @@ const QuizPageGenerator = ({ title = "", ...rest }: QuizRendererProps & {
     {
       path:"/quiz/results",
       Component: (props:any) => <Layout><ResultsPage {...props}/></Layout>
-    }
+    },
+    {path:'/category/:id',
+    element: <Layout><CategoryPage/></Layout>
+  
+  }
   ]
 

@@ -9,6 +9,8 @@ const flagBackground = '/flag_background_1.png'
 // const uscis = new URL('/uscis.png', import.meta.url).href
 const uscis = '/uscis.png'
 import './home.css'
+import ByCategory from '../components/ByCategory'
+import RandomQuestions from '../components/RandomQuestions'
 
 interface Props {
 
@@ -74,29 +76,9 @@ export const Home = (_props: Props) => {
                         </div>
 
                     </div>
-                    <div className="container-sm card mt-1">
-                        <h2 className="mt-1 mb-1 text-start">10 Random Questions: </h2>
-                        <div className="flex flex-center">
-                            <Link to="/random/2024" className="unstyled-link">
-                                <button className="btn text-normal btn-gradient">
-                                    2024 (EN)
-                                </button>
-                            </Link>
+                   <RandomQuestions />
 
-                        </div>
-                        <div className="flex flex-center mt-1">
-                            <Link to="/random/es/2024" className="unstyled-link">
-                                <button className="btn text-normal btn-gradient">
-                                    2024 (ES)
-                                </button>
-                            </Link>
-
-                        </div>
-
-                    </div>
-
-
-
+                    <ByCategory />
                     <div className="mt-3 mb-3 pb-3">
                         <h3 className="pt-3">
                             More Resources:

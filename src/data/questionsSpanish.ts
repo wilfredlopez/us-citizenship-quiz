@@ -270,7 +270,7 @@ export const _OLDesQuestionsConstructor: QuestionContructor[] = [
       "Jerry Brown",
     ],
     type: "input",
-    tip: "Vaya a https://www.house.gov/ y escriba su código postal. Para '07026' en 2021 es 'Bill Pascrell Jr. (Democrat)'",
+    tip: "Vaya a https://www.house.gov/ y escriba su código postal. Para '07026' en 2024 es 'Bill Pascrell Jr. (Democrat)'",
     number: 23,
   },
   {
@@ -1534,7 +1534,7 @@ const esQuestionsConstructor: QuestionContructor[] = [
       "Jerry Brown",
     ],
     type: "input",
-    tip: "Vaya a https://www.house.gov/ y escriba su código postal. Para '07026' en 2021 es 'Bill Pascrell Jr. (Democrat)'",
+    tip: "Vaya a https://www.house.gov/ y escriba su código postal. Para '07026' en 2024 es 'Bill Pascrell Jr. (Democrat)'",
     number: 23,
     category: "System of Government",
   },

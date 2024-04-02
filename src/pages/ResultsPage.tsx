@@ -2,7 +2,7 @@ import { useMemo } from 'react'
 import { ArrowBackIcon } from '../components/ArrowBackIcon'
 import { QuizWrapper } from '../components/QuizWrapper'
 import { getPercent } from '../utils/getPercent'
-import { useLocation, Location } from 'react-router-dom';
+import { useLocation, Location, Link } from 'react-router-dom';
 
 
 interface StateProps { totalCorrect: number, totalQuestions: number }
@@ -41,6 +41,11 @@ export const ResultsPage = (_: StateProps) => {
                     <button className="btn btn-secondary" onClick={() => window.history.back()}>
                         <ArrowBackIcon width={15} /> &nbsp; Go Back
                     </button>
+                </section>
+                <section className="flex flex-center mt-2">
+                    <Link to={'/'} className="btn btn-secondary">
+                         Home
+                    </Link>
                 </section>
             </div>
             <br />
