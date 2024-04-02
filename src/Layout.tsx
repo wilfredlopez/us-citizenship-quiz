@@ -32,11 +32,17 @@ function Layout(props: PropsWithChildren<{}>) {
                     <h4>Resources</h4>
                     <ul className="mt-1">
                         <li>
-                            <a href="https://www.uscis.gov/">USCIS</a>
+                            <a 
+                              target="_blank"
+                              rel="noreferrer"
+                            href="https://www.uscis.gov/">USCIS</a>
 
                         </li>
                         <li>
-                            <a href="https://www.uscis.gov/citizenship/find-study-materials-and-resources">find-study-materials-and-resources (USCIS)</a>
+                            <a 
+                              target="_blank"
+                              rel="noreferrer"
+                            href="https://www.uscis.gov/citizenship/find-study-materials-and-resources">find-study-materials-and-resources (USCIS)</a>
                         </li>
                     </ul>
                 </div>

@@ -87,7 +87,10 @@ export const Home = (_props: Props) => {
 
                             <p>
                                 Prepare for your the Civics test at
-                                <a href="https://www.uscis.gov/citizenship/find-study-materials-and-resources"> uscis.gov</a>
+                                <a 
+                                target="_blank"
+                                rel="noreferrer"
+                                href="https://www.uscis.gov/citizenship/find-study-materials-and-resources"> uscis.gov</a>
                             </p>
                         </div>
 
