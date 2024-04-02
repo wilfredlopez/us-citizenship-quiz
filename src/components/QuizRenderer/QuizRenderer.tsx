@@ -8,6 +8,7 @@ import { QuizHeader } from './QuizHeader'
 import { MessageType, RenderMode } from './QuizRenderer.interface'
 import { SoundEffectPlayer } from '../../model/SoundEffectPlayer'
 
+
 export interface QuizRendererProps {
     questions: Question[]
     mode?: RenderMode
@@ -36,6 +37,8 @@ export const QuizRenderer = ({ title, questions, maxQuestions = 100, mode = 'tes
     const currentQuestion = useMemo(() => questions[currentIndex], [currentIndex, questions])
 
 
+  
+    
     useEffect(() => {
         window.scrollTo({
             top: 0,

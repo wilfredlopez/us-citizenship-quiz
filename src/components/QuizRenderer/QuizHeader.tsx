@@ -20,6 +20,7 @@ export const QuizHeader = ({ mode, totalCorrect, maxQuestions }: Props) => {
                     {/* <p>
                         <b>Total Correct: </b> {totalCorrect}
                     </p> */}
+                    <p className='text-center'><b className='text-success'>{totalCorrect}</b> out of <b>{maxQuestions}</b></p>
                     <p>
                         <b>Current Score: </b> {getPercent(totalCorrect, maxQuestions)}%
                     </p>
