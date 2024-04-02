@@ -1,3 +1,4 @@
+import { Category } from '../model/Category';
 import { QuestionContructor, Question } from '../model/Question'
 
 
@@ -2694,4 +2695,7 @@ const questionConstructors_Updated2024: QuestionContructor[] = [
 
 export const allQuestions = questionConstructors_Updated2024.map(obj => new Question(obj))
 
-export const CATEGORIES = questionConstructors_Updated2024.filter(q => q.category !== undefined).map(q => q.category!)
+const categorySet = new Set(questionConstructors_Updated2024.filter(q => q.category !== undefined).map(q => q.category!))
+export const CATEGORIES = [...categorySet]
+
+export const CategoryModels = CATEGORIES.map(category => new Category(category))

@@ -32,11 +32,17 @@ function Layout(props: PropsWithChildren<{}>) {
                     <h4>Resources</h4>
                     <ul className="mt-1">
                         <li>
-                            <a href="https://www.uscis.gov/">USCIS</a>
+                            <a 
+                              target="_blank"
+                              rel="noreferrer"
+                            href="https://www.uscis.gov/">USCIS</a>
 
                         </li>
                         <li>
-                            <a href="https://www.uscis.gov/citizenship/find-study-materials-and-resources">find-study-materials-and-resources (USCIS)</a>
+                            <a 
+                              target="_blank"
+                              rel="noreferrer"
+                            href="https://www.uscis.gov/citizenship/find-study-materials-and-resources">find-study-materials-and-resources (USCIS)</a>
                         </li>
                     </ul>
                 </div>
@@ -46,7 +52,7 @@ function Layout(props: PropsWithChildren<{}>) {
                 <p></p>
                 <p></p>
                 <p>
-                    US Citizenship Quiz &copy;2021
+                    US Citizenship Quiz &copy;2024
                 </p>
                 <p>
                     <small>By Wilfred Lopez </small>
@@ -55,7 +61,7 @@ function Layout(props: PropsWithChildren<{}>) {
                     <a
                         target="_blank"
                         rel="noreferrer"
-                        href="https://wilfredlopez.net" className="styled-link">www.wilfredlopez.net</a>
+                        href="https://instagram.com/qbamc_rd" className="styled-link">Instagram: @QBAMC_RD</a>
                 </p>
             </section>
         </div>
