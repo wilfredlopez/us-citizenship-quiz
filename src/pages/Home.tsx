@@ -45,32 +45,32 @@ export const Home = (_props: Props) => {
 
                         <h2 className="mt-1 mb-1 text-start">Available Quizes: </h2>
                         <div className="flex">
-                            <Link to="/quiz/2024" className="unstyled-link">
+                            <Link to="/quiz/2025" className="unstyled-link">
                                 <button className="btn text-normal btn-gradient">
-                                    US Civics Quiz  2024
+                                    US Civics Quiz  2025
                                 </button>
                             </Link>
 
                         </div>
                         <div className="flex mt-1">
-                            <Link to="/quiz/es/2024" className="unstyled-link">
+                            <Link to="/quiz/es/2025" className="unstyled-link">
                                 <button className="btn text-normal btn-gradient">
-                                    US Civics Quiz  2024 (Spanish)
+                                    US Civics Quiz  2025 (Spanish)
                                 </button>
                             </Link>
 
                         </div>
                         <div className="flex mt-1">
-                            <Link to="/quiz/practice/2024" className="unstyled-link">
+                            <Link to="/quiz/practice/2025" className="unstyled-link">
                                 <button className="btn text-normal btn-gradient">
-                                    US Civics Quiz 2024 (Practice Mode)
+                                    US Civics Quiz 2025 (Practice Mode)
                                 </button>
                             </Link>
                         </div>
                         <div className="flex mt-1">
-                            <Link to="/quiz/es/practice/2024" className="unstyled-link">
+                            <Link to="/quiz/es/practice/2025" className="unstyled-link">
                                 <button className="btn text-normal btn-gradient">
-                                    US Civics Quiz 2024 (Spanish Practice Mode)
+                                    US Civics Quiz 2025 (Spanish Practice Mode)
                                 </button>
                             </Link>
                         </div>

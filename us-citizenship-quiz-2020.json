@@ -235,8 +235,8 @@
   },
   {
     "text": "Who is one of your state’s U.S. Senators now?* (NJ)",
-    "correctAnswers": ["robert menendez", "cory a. booker", "cory booker"],
-    "options": ["robert menendez", "donald trump", "paul ryan", "nancy pelosa"],
+    "correctAnswers": ["Andy Kim", "cory a. booker", "cory booker"],
+    "options": ["cory booker", "donald trump", "paul ryan", "nancy pelosa"],
     "type": "input",
     "tip": "Answers will vary. Visit senate.gov to find your state’s U.S. Senators.",
     "number": 20
@@ -260,15 +260,15 @@
   },
   {
     "text": "Name your U.S. Representative. (Garfield, NJ)",
-    "correctAnswers": ["bill pascrell jr.", "bill pascrell"],
+    "correctAnswers": ["Nellie Pou"],
     "options": [
-      "bill pascrell jr.",
+      "Nellie Pou",
       "paul ryan",
       "kamala harris.",
       "jerry brown"
     ],
     "type": "input",
-    "tip": "Go to https://www.house.gov/ and type your zip code. For '07026' in 2024 is 'Bill Pascrell Jr. (Democrat)'",
+    "tip": "Go to https://www.house.gov/ and type your zip code. For '07026' in 2025 is 'Nellie Pou'",
     "number": 23
   },
   {
@@ -311,7 +311,7 @@
   },
   {
     "text": "What is the name of the President of the United States now?*",
-    "correctAnswers": ["joe biden", "joseph r. biden, jr.", "biden"],
+    "correctAnswers": ["donald trump"],
     "options": ["donald trump", "barack obama", "joe biden", "mike pence"],
     "type": "input",
     "tip": "Visit uscis.gov/citizenship/testupdates for the name of the President of the United States.",
@@ -319,8 +319,8 @@
   },
   {
     "text": "What is the name of the Vice President of the United States now?",
-    "correctAnswers": ["kamala d. harris", "kamala harris", "harris"],
-    "options": ["kamala harris", "mike pence", "donald trump", "barack obama"],
+    "correctAnswers": ["JD Vance"],
+    "options": ["kamala harris", "mike pence", "donald trump", "JD Vance"],
     "type": "input",
     "tip": "Visit uscis.gov/citizenship/testupdates for the name of the Vice President of the United States.",
     "number": 29

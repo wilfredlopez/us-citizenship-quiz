@@ -237,8 +237,8 @@ export const _OLDesQuestionsConstructor: QuestionContructor[] = [
   },
   {
     text: "¿Quién es uno de los senadores estadounidenses de su estado ahora? * (NJ)",
-    correctAnswers: ["robert menendez", "cory a. booker", "cory booker"],
-    options: ["robert menendez", "donald trump", "paul ryan", "nancy pelosa"],
+    correctAnswers: ["Andy Kim", "cory a. booker", "cory booker"],
+    options: ["cory booker", "donald trump", "paul ryan", "nancy pelosa"],
     type: "input",
     tip: "Las respuestas variarán. Visite senate.gov para encontrar los senadores de los Estados Unidos de su estado.",
     number: 20,
@@ -262,15 +262,15 @@ export const _OLDesQuestionsConstructor: QuestionContructor[] = [
   },
   {
     text: "Nombre a su representante en los EE. UU. (Garfield, NJ)",
-    correctAnswers: ["bill pascrell jr.", "bill pascrell"],
+    correctAnswers: ["Nellie Pou"],
     options: [
-      "bill pascrell jr.",
+      "Nellie Pou",
       "paul ryan",
       "kamala harris.",
       "Jerry Brown",
     ],
     type: "input",
-    tip: "Vaya a https://www.house.gov/ y escriba su código postal. Para '07026' en 2024 es 'Bill Pascrell Jr. (Democrat)'",
+    tip: "Vaya a https://www.house.gov/ y escriba su código postal. Para '07026' en 2025 es 'Nellie Pou'",
     number: 23,
   },
   {
@@ -313,7 +313,7 @@ export const _OLDesQuestionsConstructor: QuestionContructor[] = [
   },
   {
     text: "¿Cómo se llama ahora el presidente de los Estados Unidos? *",
-    correctAnswers: ["joe biden", "joseph r. biden, jr.", "biden"],
+    correctAnswers: ["donald trump"],
     options: ["donald trump", "barack obama", "joe biden", "mike pence"],
     type: "input",
     tip: "Visite uscis.gov/citizenship/testupdates para conocer el nombre del presidente de los Estados Unidos",
@@ -321,8 +321,8 @@ export const _OLDesQuestionsConstructor: QuestionContructor[] = [
   },
   {
     text: "¿Cómo se llama ahora el vicepresidente de los Estados Unidos?",
-    correctAnswers: ["kamala d. harris", "kamala harris", "harris"],
-    options: ["kamala harris", "mike pence", "donald trump", "barack obama"],
+    correctAnswers: ["JD Vance"],
+    options: ["kamala harris", "mike pence", "donald trump", "JD Vance"],
     type: "input",
     tip: "Visite uscis.gov/citizenship/testupdates para conocer el nombre del vicepresidente de los Estados Unidos",
     number: 29,
@@ -523,7 +523,7 @@ export const _OLDesQuestionsConstructor: QuestionContructor[] = [
   },
   {
     text: "¿Cuál es el partido político del presidente ahora?",
-    correctAnswers: ["democrático"],
+    correctAnswers: ["republicano"],
     options: ["republicano", "democrático", "comunista", "partido verde"],
     type: "input",
     tip: "Visite uscis.gov/citizenship/testupdates para conocer el partido político del presidente",
@@ -531,8 +531,8 @@ export const _OLDesQuestionsConstructor: QuestionContructor[] = [
   },
   {
     text: "¿Cómo se llama ahora el vocero de la casa de Representantes?",
-    correctAnswers: ["nancy pelosi", "pelosi"],
-    options: ["paul ryan", "nancy pelosi", "john roberts", "jerry brown"],
+    correctAnswers: ["Mike Johnson"],
+    options: ["paul ryan", "nancy pelosi", "Mike Johnson", "jerry brown"],
     type: "input",
     tip: "Visite uscis.gov/citizenship/testupdates para obtener el nombre del presidente de la Cámara de Representantes",
     number: 47,
@@ -773,6 +773,27 @@ export const _OLDesQuestionsConstructor: QuestionContructor[] = [
       "Georgia",
       "nueva york, nueva jersey, pensilvania",
     ],
+    findCorrectAnswers:function(a){
+      for (let j =0; j<this.options.length;j++){
+          let current = this.options[j]
+          if(a === current){
+              return true
+          }
+      }
+      //['new york', 'new jersey', 'pennsylvania']
+      const userAnswers = a.trim().split(',').map(str => str.trim())
+      let totalCorrect = 0;
+      if(this.options.length === 0){
+          return false
+      }
+      for(let i=0; i<this.options.length;i++){
+          const opt = this.options[i]
+          if(userAnswers.includes(opt)){
+              totalCorrect++
+          }
+      }
+      return totalCorrect >= 3
+  },
     options: [
       "nueva york, nueva jersey, pensilvania",
       "nueva york, nueva jersey, idaho",
@@ -1498,8 +1519,8 @@ const esQuestionsConstructor: QuestionContructor[] = [
   },
   {
     text: "¿Quién es uno de los senadores estadounidenses de su estado ahora? * (NJ)",
-    correctAnswers: ["robert menendez", "cory a. booker", "cory booker"],
-    options: ["robert menendez", "donald trump", "paul ryan", "nancy pelosa"],
+    correctAnswers: ["Andy Kim", "cory a. booker", "cory booker"],
+    options: ["cory booker", "donald trump", "paul ryan", "nancy pelosa"],
     type: "input",
     tip: "Las respuestas variarán. Visite senate.gov para encontrar los senadores de los Estados Unidos de su estado.",
     number: 20,
@@ -1526,15 +1547,15 @@ const esQuestionsConstructor: QuestionContructor[] = [
   },
   {
     text: "Nombre a su representante en los EE. UU. (Garfield, NJ)",
-    correctAnswers: ["bill pascrell jr.", "bill pascrell"],
+    correctAnswers: ["Nellie Pou"],
     options: [
-      "bill pascrell jr.",
+      "Nellie Pou",
       "paul ryan",
       "kamala harris.",
       "Jerry Brown",
     ],
     type: "input",
-    tip: "Vaya a https://www.house.gov/ y escriba su código postal. Para '07026' en 2024 es 'Bill Pascrell Jr. (Democrat)'",
+    tip: "Vaya a https://www.house.gov/ y escriba su código postal. Para '07026' en 2025 es 'Bill Pascrell Jr. (Democrat)'",
     number: 23,
     category: "System of Government",
   },
@@ -1582,7 +1603,7 @@ const esQuestionsConstructor: QuestionContructor[] = [
   },
   {
     text: "¿Cómo se llama ahora el presidente de los Estados Unidos? *",
-    correctAnswers: ["joe biden", "joseph r. biden, jr.", "biden"],
+    correctAnswers: ["donald trump"],
     options: ["donald trump", "barack obama", "joe biden", "mike pence"],
     type: "input",
     tip: "Visite uscis.gov/citizenship/testupdates para conocer el nombre del presidente de los Estados Unidos",
@@ -1591,8 +1612,8 @@ const esQuestionsConstructor: QuestionContructor[] = [
   },
   {
     text: "¿Cómo se llama ahora el vicepresidente de los Estados Unidos?",
-    correctAnswers: ["kamala d. harris", "kamala harris", "harris"],
-    options: ["kamala harris", "mike pence", "donald trump", "barack obama"],
+    correctAnswers: ["JD Vance"],
+    options: ["kamala harris", "mike pence", "donald trump", "JD Vance"],
     type: "input",
     tip: "Visite uscis.gov/citizenship/testupdates para conocer el nombre del vicepresidente de los Estados Unidos",
     number: 29,
@@ -1810,7 +1831,7 @@ const esQuestionsConstructor: QuestionContructor[] = [
   },
   {
     text: "¿Cuál es el partido político del presidente ahora?",
-    correctAnswers: ["democrático"],
+    correctAnswers: ["republicano"],
     options: ["republicano", "democrático", "comunista", "partido verde"],
     type: "input",
     tip: "Visite uscis.gov/citizenship/testupdates para conocer el partido político del presidente",
@@ -2078,6 +2099,27 @@ const esQuestionsConstructor: QuestionContructor[] = [
       "Georgia",
       "nueva york, nueva jersey, pensilvania",
     ],
+    findCorrectAnswers:function(a){
+      for (let j =0; j<this.options.length;j++){
+          let current = this.options[j]
+          if(a === current){
+              return true
+          }
+      }
+      //['new york', 'new jersey', 'pennsylvania']
+      const userAnswers = a.trim().split(',').map(str => str.trim())
+      let totalCorrect = 0;
+      if(this.options.length === 0){
+          return false
+      }
+      for(let i=0; i<this.options.length;i++){
+          const opt = this.options[i]
+          if(userAnswers.includes(opt)){
+              totalCorrect++
+          }
+      }
+      return totalCorrect >= 3
+  },
     options: [
       "nueva york, nueva jersey, pensilvania",
       "nueva york, nueva jersey, idaho",

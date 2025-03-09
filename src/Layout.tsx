@@ -52,7 +52,7 @@ function Layout(props: PropsWithChildren<{}>) {
                 <p></p>
                 <p></p>
                 <p>
-                    US Citizenship Quiz &copy;2024
+                    US Citizenship Quiz &copy;2025
                 </p>
                 <p>
                     <small>By Wilfred Lopez </small>

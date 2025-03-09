@@ -1316,7 +1316,7 @@ import { QuestionContructor, Question } from '../model/Question'
 //     },
 // ]
 
-const questionConstructors_Updated2024: QuestionContructor[] = [
+const questionConstructors_Updated2025: QuestionContructor[] = [
     {
         text: 'What is the supreme law of the land?',
         correctAnswers: ['the constitution'],
@@ -1591,8 +1591,8 @@ const questionConstructors_Updated2024: QuestionContructor[] = [
     },
     {
         text: 'Who is one of your state’s U.S. Senators now?* (NJ)',
-        correctAnswers: ['robert menendez', 'cory a. booker', 'cory booker'],
-        options: ['robert menendez', 'donald trump', 'paul ryan', 'nancy pelosa'],
+        correctAnswers: ['Andy Kim', 'cory a. booker', 'cory booker'],
+        options: ['cory booker', 'donald trump', 'paul ryan', 'nancy pelosa'],
         type: 'input',
         tip:
             'Answers will vary. Visit senate.gov to find your state’s U.S. Senators. This answers are valid for NJ state only.',
@@ -1622,16 +1622,16 @@ const questionConstructors_Updated2024: QuestionContructor[] = [
     },
     {
         text: 'Name your U.S. Representative. (Garfield, NJ)',
-        correctAnswers: ['bill pascrell jr.', 'bill pascrell'],
+        correctAnswers: ['Nellie Pou'],
         options: [
-            'bill pascrell jr.',
+            'Nellie Pou',
             'paul ryan',
             'kamala harris.',
             'jerry brown',
         ],
         type: 'input',
         tip:
-            "Go to https://www.house.gov/ and type your zip code to find yours. For '07026' in 2024 is 'Bill Pascrell Jr. (Democrat)'",
+            "Go to https://www.house.gov/ and type your zip code to find yours. For '07026' in 2025 is 'Bill Pascrell Jr. (Democrat)'",
         number: 23,
         category:'System of Government'
     },
@@ -1683,7 +1683,7 @@ const questionConstructors_Updated2024: QuestionContructor[] = [
     },
     {
         text: 'What is the name of the President of the United States now?*',
-        correctAnswers: ['joe biden', 'joseph r. biden, jr.', 'biden'],
+        correctAnswers: ['donald trump'],
         options: ['donald trump', 'barack obama', 'joe biden', 'mike pence'],
         type: 'input',
         tip:
@@ -1693,8 +1693,8 @@ const questionConstructors_Updated2024: QuestionContructor[] = [
     },
     {
         text: 'What is the name of the Vice President of the United States now?',
-        correctAnswers: ['kamala d. harris', 'kamala harris', 'harris'],
-        options: ['kamala harris', 'mike pence', 'donald trump', 'barack obama'],
+        correctAnswers: ['JD Vance'],
+        options: ['kamala harris', 'mike pence', 'donald trump', 'JD Vance'],
         type: 'input',
         tip:
             'Visit uscis.gov/citizenship/testupdates for the name of the Vice President of the United States.',
@@ -1930,7 +1930,7 @@ const questionConstructors_Updated2024: QuestionContructor[] = [
     },
     {
         text: 'What is the political party of the President now?',
-        correctAnswers: ['democratic'],
+        correctAnswers: ['republican'],
         options: ['republican', 'democratic', 'communist', 'green party'],
         type: 'input',
         tip:
@@ -2192,6 +2192,12 @@ const questionConstructors_Updated2024: QuestionContructor[] = [
             'new york, new jersey, pennsylvania',
         ],
         findCorrectAnswers:function(a){
+            for (let j =0; j<this.options.length;j++){
+                let current = this.options[j]
+                if(a === current){
+                    return true
+                }
+            }
             //['new york', 'new jersey', 'pennsylvania']
             const userAnswers = a.trim().split(',').map(str => str.trim())
             let totalCorrect = 0;
@@ -2693,9 +2699,9 @@ const questionConstructors_Updated2024: QuestionContructor[] = [
 
 
 
-export const allQuestions = questionConstructors_Updated2024.map(obj => new Question(obj))
+export const allQuestions = questionConstructors_Updated2025.map(obj => new Question(obj))
 
-const categorySet = new Set(questionConstructors_Updated2024.filter(q => q.category !== undefined).map(q => q.category!))
+const categorySet = new Set(questionConstructors_Updated2025.filter(q => q.category !== undefined).map(q => q.category!))
 export const CATEGORIES = [...categorySet]
 
 export const CategoryModels = CATEGORIES.map(category => new Category(category))

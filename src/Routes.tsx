@@ -34,28 +34,28 @@ const random10Es = shuffle(questionsSpanish).slice(0, 10)
       element:<Layout><Home/></Layout> ,
     },
     {
-      path: "/quiz/2024",
-      element: <Layout><QuizPageGenerator title="2024" questions={allQuestions} /></Layout>,
+      path: "/quiz/2025",
+      element: <Layout><QuizPageGenerator title="2025" questions={allQuestions} /></Layout>,
     },
     {
-      path:"/random/2024",
+      path:"/random/2025",
       element:<Layout><QuizPageGenerator title="Random Questions" maxQuestions={10} questions={random10} /></Layout>
     },
     {
-      path:"/quiz/es/2024",
-      element:<Layout><QuizPageGenerator title="2024 (es)" inSpanish questions={questionsSpanish} /></Layout>
+      path:"/quiz/es/2025",
+      element:<Layout><QuizPageGenerator title="2025 (es)" inSpanish questions={questionsSpanish} /></Layout>
     },
     {
-      path:"/random/es/2024",
+      path:"/random/es/2025",
       element:<Layout><QuizPageGenerator title="Random Questions (es)" maxQuestions={10} inSpanish questions={random10Es} /></Layout>
     },
     {
-      path:"/quiz/es/practice/2024",
-      element:<Layout><QuizPageGenerator title="2024 (es)" mode="practice" inSpanish questions={questionsSpanish} /></Layout>
+      path:"/quiz/es/practice/2025",
+      element:<Layout><QuizPageGenerator title="2025 (es)" mode="practice" inSpanish questions={questionsSpanish} /></Layout>
     },
     {
-      path:"/quiz/practice/2024",
-      element:<Layout><QuizPageGenerator title="2024" questions={allQuestions} mode="practice" /></Layout>
+      path:"/quiz/practice/2025",
+      element:<Layout><QuizPageGenerator title="2025" questions={allQuestions} mode="practice" /></Layout>
     },
     {
       path:"/quiz/results",

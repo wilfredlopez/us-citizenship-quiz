@@ -235,8 +235,8 @@
   },
   {
     "text": "¿Quién es uno de los senadores estadounidenses de su estado ahora? * (NJ)",
-    "correctAnswers": ["robert menendez", "cory a. booker", "cory booker"],
-    "options": ["robert menendez", "donald trump", "paul ryan", "nancy pelosa"],
+    "correctAnswers": ["Andy Kim", "cory a. booker", "cory booker"],
+    "options": ["cory booker", "donald trump", "paul ryan", "nancy pelosa"],
     "type": "input",
     "tip": "Las respuestas variarán. Visite senate.gov para encontrar los senadores de los Estados Unidos de su estado.",
     "number": 20
@@ -260,15 +260,15 @@
   },
   {
     "text": "Nombre a su representante en los EE. UU. (Garfield, NJ)",
-    "correctAnswers": ["bill pascrell jr.", "bill pascrell"],
+    "correctAnswers": ["Nellie Pou"],
     "options": [
-      "bill pascrell jr.",
+      "Nellie Pou",
       "paul ryan",
       "kamala harris.",
       "Jerry Brown"
     ],
     "type": "input",
-    "tip": "Vaya a https://www.house.gov/ y escriba su código postal. Para '07026' en 2024 es 'Bill Pascrell Jr. (Democrat)'",
+    "tip": "Vaya a https://www.house.gov/ y escriba su código postal. Para '07026' en 2025 es 'Nellie Pou'",
     "number": 23
   },
   {
@@ -311,7 +311,7 @@
   },
   {
     "text": "¿Cómo se llama ahora el presidente de los Estados Unidos? *",
-    "correctAnswers": ["joe biden", "joseph r. biden, jr.", "biden"],
+    "correctAnswers": ["donald trump"],
     "options": ["donald trump", "barack obama", "joe biden", "mike pence"],
     "type": "input",
     "tip": "Visite uscis.gov/citizenship/testupdates para conocer el nombre del presidente de los Estados Unidos",
@@ -319,8 +319,8 @@
   },
   {
     "text": "¿Cómo se llama ahora el vicepresidente de los Estados Unidos?",
-    "correctAnswers": ["kamala d. harris", "kamala harris", "harris"],
-    "options": ["kamala harris", "mike pence", "donald trump", "barack obama"],
+    "correctAnswers": ["JD Vance"],
+    "options": ["kamala harris", "mike pence", "donald trump", "JD Vance"],
     "type": "input",
     "tip": "Visite uscis.gov/citizenship/testupdates para conocer el nombre del vicepresidente de los Estados Unidos",
     "number": 29
@@ -461,7 +461,7 @@
     "correctAnswers": ["john roberts", "john g. roberts, jr."],
     "options": ["john roberts", "paul ryan", "nancy pelosi", "jerry brown"],
     "type": "input",
-    "tip": "Visite uscis.gov/citizenship/testupdates para conocer el nombre del presidente del Tribunal Supremo de los Estados Unidos",
+    "tip": "Visite uscis.gov/citizenship/testupdates para conocer  del presidente del Tribunal Supremo de los Estados Unidos",
     "number": 40
   },
   {
