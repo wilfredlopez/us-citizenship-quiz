@@ -93,7 +93,6 @@ export const Home = (_props: Props) => {
                                 href="https://www.uscis.gov/citizenship/find-study-materials-and-resources"> uscis.gov</a>
                             </p>
                         </div>
-
                     </div>
 
                 </section>
